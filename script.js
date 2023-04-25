@@ -5,7 +5,7 @@ const clearButton = document.querySelector('.clear-button'); //кнопка Оч
 
 const inputElement = document.querySelector('.input-part__input'); //поле ввода задачи
 
-const outputElement = document.querySelector('.output-part__tasks'); //поле вывода списка задач
+const outputElementTasks = document.querySelector('.output-part__tasks'); //поле вывода списка задач
 
 const outputElementNoTasks = document.querySelector('.output-part__no-tasks'); //поле вывода "Нет задач"
 
@@ -16,7 +16,7 @@ const showTasks = () => {
 const inputValue = inputElement.value;
 tasks.push(inputValue);
 outputElementNoTasks.innerHTML = '';
-outputElement.innerHTML += `<p class="output-part__item-filled">${inputValue} <input id="checkbox" type="checkbox"</p>`;
+outputElementTasks.innerHTML += `<p class="output-part__item-filled">${inputValue} <input id="checkbox" type="checkbox"</p>`;
 if(tasks.lenghth !==0) {
     clearButton.removeAttribute('disabled', true);
 }
@@ -31,7 +31,7 @@ addButton.addEventListener('click', showTasks );
 const clearTasks = () => {
     tasks.splice(0);
     outputElementNoTasks.innerHTML = `<p class="output-part__item-cleared">Нет задач</p>`;
-    outputElement.innerHTML = '';
+    outputElementTasks.innerHTML = '';
     clearButton.setAttribute('disabled', true);
 
 }
