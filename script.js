@@ -14,17 +14,20 @@ let tasks = [];
 
 const showTasks = () => {
 const inputValue = inputElement.value;
+if(inputValue !=='') {
 tasks.push(inputValue);
 outputElementNoTasks.innerHTML = '';
-outputElementTasks.innerHTML += `<p class="output-part__item-filled">${inputValue} <input id="checkbox" type="checkbox"</p>`;
+outputElementTasks.innerHTML += `<label class="output-part__item-filled">${inputValue} <input id="checkbox" type="checkbox"> <span class="checkmark"></span></label> 
+`;
 if(tasks.lenghth !==0) {
     clearButton.removeAttribute('disabled', true);
+}
 }
 }
 
 
 //вешаем обработчик событий на кнопку добавить
-addButton.addEventListener('click', showTasks );
+addButton.addEventListener('click', showTasks);
 
 
 //функция удаления задач из массива и очищения output-part__tasks и делаем кнопку Очистить неактивной
