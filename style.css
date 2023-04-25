@@ -57,12 +57,18 @@ justify-content: space-between;
     width: 100%;
 }
 
-.output-part__item {
+.output-part__item-filled {
     padding-right: 30px;
     display: flex;
     justify-content: space-between;
     font-size: 1.1em;
 }
+
+.output-part__item-cleared {
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 
 #checkbox {
     width: 20px;
