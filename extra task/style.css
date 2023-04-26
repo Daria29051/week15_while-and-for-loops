@@ -24,6 +24,7 @@
 .output__field {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 150px;
     height: 30px;
     border: 1px solid grey;
